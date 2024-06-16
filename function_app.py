@@ -38,7 +38,7 @@ def check_sp500_drop():
     if this_friday_close is None or last_friday_close is None:
         return False
 
-    drop_percentage = (last_friday_close - this_friday_close) / \
+    drop_percentage = (this_friday_close - last_friday_close) / \
         last_friday_close * 100
     return drop_percentage
 
